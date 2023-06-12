@@ -19,7 +19,7 @@ include("parts/header.php");
 
                     <p><?php echo $joueur["name"] ?></p>
                     <p><?php echo $joueur["age"] ?> ans</p>
-                    <p><?php echo $joueur["position"] ?></p>
+                    <p><?php echo $joueur["poste"] ?></p>
 
                 </div>
             </div>

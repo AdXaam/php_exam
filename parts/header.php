@@ -10,16 +10,20 @@
     <title class="text-primary"><?php echo isset($title) ? $title : "Site de la Fédération Francaise de Foot" ?></title>
 </head>
 <body>
-<div class="p-3 d-flex justify-content-space-evenly" id="navbarNav">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.php">FFF</a>
 
-    <a class="col-2" href="index.php">FFF</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="d-flex justify-content-evenly col-8">
-        <a class="" href="admin.php">ADMIN</a>
-        <a class="" href="login.php">Login</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.php">Equipe de France</a>
+            <a class="nav-item nav-link" href="login.php">Pour Monsieur Dechamps</a>
+        </div>
     </div>
-
-</div>
+</nav>
 
 <h1 class="text-light text-center my-3"><?php echo isset($title) ? $title : "Site de la Fédération Francais de Foot" ?></h1>
 

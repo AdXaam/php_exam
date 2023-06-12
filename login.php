@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
     <form method="post" action="login.php" class="p-5">
         <div class="form-group">
-            <label for="username">Username</label>
+            <label for="username">Identifiant</label>
             <input id="username" name="username" class="form-control">
         </div>
 
