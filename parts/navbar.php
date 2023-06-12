@@ -6,10 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="nftCollection.php">Joueurs sélectionnés</a>
+                <a class="nav-link" href="index.php">Joueurs sélectionnés</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="crudRedirection.php">Admin</a>
+                <a class="nav-link" href="login.php">Admin</a>
             </li>
 
         </ul>

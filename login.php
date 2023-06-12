@@ -1,6 +1,5 @@
 <?php
-$title = "Connexion";
-
+$title = "Login";
 require "utils/connectDB.php";
 include("parts/header.php");
 session_start();
@@ -9,17 +8,17 @@ session_start();
 $errors = [];
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     if (empty($_POST["username"])) {
-        $errors["username"] = 'Veuillez saisir un identifiant';
+        $errors["username"] = 'Veuillez saisir un username';
     }
 
     if (empty($_POST["password"])) {
         $errors["password"] = 'Veuillez saisir un mot de passe';
+    }
+
 
     if (count($errors) == 0) {
 
-        $stmt = $bdd->prepare(
-            'SELECT * FROM user WHERE username = :username'
-        );
+        $stmt = $bdd->prepare('SELECT * FROM utilisateur WHERE username = :username');
         $stmt->bindParam(':username', $_POST["username"]);
         $stmt->execute();
         $res = $stmt->fetch();
@@ -28,11 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
             $errors["password"] = 'Identifiants ou mot de passe incorrecte';
         } else {
+
             $_SESSION["username"] = $res["username"];
             header('Location: admin.php');
         }
     }
-}
 }
 
 ?>
@@ -59,4 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
     <input type="submit" class="btn btn-success mt-3">
 </form>
-<?php include 'parts/footer.php' ?>
+
+
+
+<?php
+include("parts/footer.php");
