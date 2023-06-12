@@ -20,14 +20,14 @@ include("parts/header.php");
 
         foreach ($joueurs as $joueur) { ?>
 
-            <div class="card col-3 m-3 text-center">
+            <div class="card col-3 m-3   text-center">
 
                 <p><?php echo $joueur["name"] ?></p>
                 <p><?php echo $joueur["age"] ?> ans</p>
                 <p><?php echo $joueur["poste"]?></p>
                 <div class="d-flex justify-content-evenly">
-                    <a class="btn btn-warning py-0" href="update.php?id=<?php echo $joueur["id"] ?>">Update</a>
-                    <a class="btn btn-danger py-0" href="delete.php?id=<?php echo $joueur["id"] ?>">Delete</a>
+                    <a class="btn btn-warning py-0" href="update.php?id=<?php echo $joueur["id"] ?>">Modifier</a>
+                    <a class="btn btn-danger py-0" href="delete.php?id=<?php echo $joueur["id"] ?>">Supprimer</a>
                 </div>
             </div>
 
