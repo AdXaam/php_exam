@@ -1,6 +1,6 @@
 <?php
-include("utils/connectDB.php");
 $title = "Ajouter un joueur";
+require "utils/connectDB.php";
 include("parts/header.php");
 
 $errors = [];
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         $errors["price"] = 'Veuillez saisir un age';
     }
 
-    if (empty($_POST["position"])) {
+    if (empty($_POST["poste"])) {
         $errors["price"] = 'Veuillez saisir un poste';
     }
 
